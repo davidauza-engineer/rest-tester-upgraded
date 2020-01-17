@@ -1,10 +1,11 @@
+#!/usr/bin/env ruby
 require 'rest-client'
 
 def request_integer_input
   gets.chomp.to_i
 end
 
-url = 'http://localhost:3000'
+url = 'http://localhost:3000/users'
 
 options = "Press 1 to execute a GET request to #{url}"
 puts "\nWelcome\n\n#{options}\n\n"
@@ -17,3 +18,4 @@ end
 
 puts
 puts RestClient.get(url)
+puts
